@@ -1,0 +1,54 @@
+<div class="main">
+  <div class="container tweet-show-container clearfix">
+
+    <div class="tweet-show-top">
+      <img src="<%= "/user_images/#{@user.image_name}" %>">
+      <div class="tweet-show-name">
+        <%= link_to(@user.name,"/users/#{@user.id}") %>
+      </div>
+    </div>
+
+    <div class="tweet-show-content">
+      <%= @post.content %>
+    </div>
+
+    <% if @post.image_name %>
+      <div class="tweet-show-image">
+        <img src="<%= "/tweet_images/#{@post.image_name}" %>">
+      </div>
+    <% end %>
+
+    <div class="tweet-show-date">
+      <%= @post.created_at.to_s(:datetime_jp) %>
+    </div>
+
+
+    <div class="tweet-show-like">
+      <% if @post.user_id == @current_user.id %>
+        <span class="fa fa-heart fa-2x like-btn-unlike"></span>
+      <% elsif Like.find_by(user_id:@current_user.id, post_id:@post.id) %>
+        <%= link_to("/likes/#{@post.id}/destroy", {method:"post"}) do %>
+          <span class="fa fa-heart fa-2x like-btn"></span>
+        <% end %>
+      <% else %>
+        <%= link_to("/likes/#{@post.id}/create", {method:"post"}) do %>
+          <span class="fa fa-heart fa-2x like-btn-unlike"></span>
+        <% end %>
+      <% end %>
+
+      <div class="like-count">
+        <%= @like.count %>
+      </div>
+    </div>
+
+    <div class="tweet-show-btn">
+      <% if @current_user.id == @user.id %>
+        <span>
+          <%= link_to("編集","/tweets/#{@post.id}/edit") %>
+        </span>
+        <%= link_to("削除","/tweets/#{@post.id}/destroy") %>
+      <% end %>
+    </div>
+
+  </div>
+</div>

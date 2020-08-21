@@ -1,0 +1,63 @@
+//users-index
+.user-index-name {
+  display: inline-block;
+  font-size: 20px;
+  margin-left: 20px;
+  line-height: 50px;
+}
+
+//users-show
+
+.user-show-info {
+  max-width: 500px;
+  margin:50px auto;
+  clear: both;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.user-show-info h2 {
+  text-align: center;
+}
+
+.user-show-info p {
+  text-align: center;
+}
+
+.user-show-info img {
+  width:100px;
+  height:100px;
+  object-fit: cover;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.user-show-index {
+  width:100%;
+  margin:50px 0;
+  display: flex;
+}
+
+.user-show-tweet {
+  width: 35%;
+  margin-left: auto;
+}
+
+.user-show-like {
+  width: 35%;
+  margin-right: auto;
+  margin-left: 30px;
+}
+
+.user-show-index-left-side img {
+  width: 40px;
+  height: 40px;
+}
+
+.user-show-index-right-side {
+  margin-left: 10px;
+}
+
+.user-show-tab {
+  text-align: center;
+}

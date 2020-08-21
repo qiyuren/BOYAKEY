@@ -1,0 +1,175 @@
+//tweet共通
+
+//index
+.index-container {
+  max-width: 600px;
+  margin:30px auto;
+  clear: both;
+}
+
+.index-search {
+padding-bottom: 30px;
+text-align: center;
+}
+
+.index-search input {
+  width:70%;
+  border: 1px solid #d8dadf;
+  padding: 10px;
+  color: #57575f;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-radius: 2px;
+}
+
+.index-search input[type="submit"] {
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: #87CEFA;
+  color: white;
+  font-size: 15px;
+  width: 15%;
+  padding: 5px 15px;
+  margin-left: 10px;
+  clear:both;
+}
+
+.index-item {
+  padding: 20px 30px;
+  margin-bottom: 1px;
+  background-color: white;
+  box-shadow:0 2px 10px #c1ced7;
+  overflow: hidden;
+}
+
+.index-left {
+  float:left;
+  width:10%;
+}
+
+.index-left img {
+  width:50px;
+  height:50px;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.index-right {
+  float:left;
+  width: 80%;
+  padding-left: 20px;
+}
+
+.index-right img {
+  width:100%;
+  height:200px;
+  object-fit: cover;
+  border: 2px solid #d8dadf;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.index-name {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+//tweets/new
+
+textarea {
+  resize: none;
+  width:100%;
+  height:150px;
+  font-size: 20px;
+  border-radius: 2px;
+  border-color: #eee;
+  color: #57575f;
+  letter-spacing: 2px;
+  border: 2px solid #d8dadf;
+}
+
+
+//tweets/show
+.tweet-show-container {
+  background-color: white;
+  padding: 30px 40px 40px 30px;
+  box-shadow:0 2px 5px #222;
+}
+
+.tweet-show-top {
+  width: 100%;
+  height: 100px;
+  display: flex;
+}
+
+.tweet-show-top img {
+  width:100px;
+  height:100px;
+  object-fit: cover;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px #c1ced7;
+}
+
+.tweet-show-name {
+  font-size: 30px;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tweet-show-content {
+  width:100%;
+  margin: 30px 0;
+  font-size: 20px;
+}
+
+.tweet-show-image {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.tweet-show-image img {
+  width:100%;
+  object-fit: contain;
+}
+
+.tweet-show-date {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.tweet-show-like {
+}
+
+.like-btn {
+  color: #ff2581;
+}
+
+.like-btn-unlike {
+  color: #8899a6;
+}
+
+.like-count {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin:0 0 0 10px;
+}
+
+.tweet-show-btn {
+  float:right;
+}
+
+.tweet-show-btn span {
+  display: inline-block;
+  padding-right:10px;
+}
+
+
+//tweets/new
+.error-message {
+  color: red;
+}

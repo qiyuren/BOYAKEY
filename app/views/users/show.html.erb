@@ -1,0 +1,57 @@
+<div class="main">
+  <div class="user-show-info">
+    <img src=" <%= "/user_images/#{@user.image_name}" %> ">
+    <h2><%= @user.name %></h2>
+    <p><%= @user.email %></p>
+    <% if @current_user.id == @user.id %>
+      <span><%= link_to("編集","/users/#{@user.id}/edit") %></span>
+    <% end %>
+  </div>
+
+  <div class="user-show-index">
+    <div class="user-show-tweet">
+      <div class="user-show-tab">
+        <h3>自分のぼやき</h3>
+      </div>
+      <% @user.posts.each do |post| %>
+        <div class="index-item">
+          <div class="index-left user-show-index-left-side"">
+            <img src=" <%= "/user_images/#{@user.image_name}" %> ">
+          </div>
+          <div class="index-right user-show-index-right-side">
+            <div class="index-name">
+              <%= link_to(@user.name,"/users/#{@user.id}") %>
+            </div>
+            <%= link_to(post.content,"/tweets/#{post.id}") %>
+            <% if post.image_name %>
+              <img src=" <%= "/tweet_images/#{post.image_name}" %> ">
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="user-show-like">
+      <div class="user-show-tab">
+        <h3>お気に入り</h3>
+      </div>
+      <% @likes.each do |like| %>
+        <% post = Tweet.find_by(id:like.post_id) %>
+        <div class="index-item">
+          <div class="index-left user-show-index-left-side"">
+            <img src=" <%= "/user_images/#{post.user.image_name}" %> ">
+          </div>
+          <div class="index-right user-show-index-right-side">
+            <div class="index-name">
+              <%= link_to(post.user.name,"/users/#{post.user.id}") %>
+            </div>
+            <%= link_to(post.content,"/tweets/#{post.id}") %>
+            <% if post.image_name %>
+              <img src=" <%= "/tweet_images/#{post.image_name}" %> ">
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    models:
+      tweet: ツイート
+      user: ユーザー
+    attributes:
+      tweet:
+        content: ぼやき
+      user:
+        name: ユーザー名
+        email: メールアドレス
+        password: パスワード
