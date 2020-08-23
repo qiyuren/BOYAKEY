@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :home
+  root 'home#top' #トップページをblogsコントローラのindexアクションに設定
+
   post 'likes/:post_id/create' => 'likes#create'
   post 'likes/:post_id/destroy' => 'likes#destroy'
 
